@@ -13,7 +13,7 @@ Need to find a developer that meets your coding needs? Come check out discoverTe
 - Portfolio: https://rmathew21.github.io/Responsive-Portfolio/
 - Github: https://github.com/rmathew21
 - LinkedIn
-- Developer 2: Arthur
+- Developer 2: Arthur Polly
 - Portfolio
 - Github
 - LinkedIn
