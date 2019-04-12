@@ -20,34 +20,311 @@
   integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
   crossorigin="anonymous"></script>
 
+  <!-- bootstrap javascript functions links-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <!-- css file link -->
 
 </head>
-<body>
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
-        <a class="navbar-brand" href="#">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Front End Dev<span class="sr-only">(current)</span></a>
+<body background="./assets/images/temp-background.jpg">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info border-bottom border-dark">
+    <!-- Website title/logo -->
+      <h2 class="navbar-brand" href="#">DiscoverTeCh</h2>
+    <!-- Nav Bar -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Front End</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Back End</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Database</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Back End Dev</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Web Design Dev</a>
-            </li>
-          </ul>
-          <span class="navbar-text mr-4">
-            <button type="button" class="btn btn-dark">Signed In</button>
-          </span>
-        </div>
-      </nav>
+                <a class="nav-link" href="#">Server</a>
+              </li>
+        </ul>
+        <span class="navbar-text"> <button type="button" class="btn btn-secondary">Signed In</button> </span>
+      </div>
+    </nav>
+     
+          
 
+      <!-- Profiles -->
+      <div class="container mt-4 mb-4 bg-dark rounded" id="profileView">
+        <div class="row" id="singleProfile">
+            <!-- User Drop Down Menu/ will use css z-index to overlay dropdown menu -->
+            <div class="col-4">
+            <nav class="navbar navbar-light bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-controls="collapseTwo" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapseTwo">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Bio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Recent Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Contact</a>
+                        </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+
+          <!-- site title/allow user to display current works title preview -->
+            <div class="col-4 pt-4 mt-4">
+              <h4 class="text-center text-light">
+                User and or site preview title
+              </h4>
+            </div>
+
+            <!-- profile img -->
+            <div class="col-4 "> 
+              <img class="rounded float-right bg-primary mb-3 mt-3" src="./assets/images/profile-pic.png" width="90px" height="90px"> 
+            </div>
+          </div>
+          <div class="container text-center">
+
+            <!-- preview user site/ replace with javascript logic URL -->
+              <iframe src="https://bootstrapmade.com/" width="760" height="600" class="rounded">
+              </iframe>
+
+              <!-- like and comment buttons, javascript logic and firebase for buttons. comment box modal and score counter -->
+              <div class="row">
+                <div class="col-8"></div>
+                  <div class="col-1 ml-3"><img src="./assets/images/like.png" width="40px" height="33px"></div>
+                  <div class="col-1"><img src="./assets/images/comment-logo.png" width="40px" height="35px"></div>
+                </div>
+            </div>
+
+            <!-- user comment data template -->
+              <div class="container">
+              <div class="row">
+                <div class="col-1"></div>
+                <!-- user pic -->
+                    <div class="col-1  p-0"> 
+                        <img class="rounded" src="./assets/images/profile-pic.png" width="45px" height="45px"> 
+                      </div>
+                      <div class="col-9 pl-0">
+                        <div class="row">
+                          <!-- user name -->
+                          <div class="col-2 text-white text-left pr-0" id="UserName"><h5>UserName</h5></div>
+                          <!-- time user commented -->
+                          <div class="col-2 text-info text-left pl-1" id="comment-time">1:00 PM</div>
+                        </div>
+                        <!-- users comment -->
+                        <div class="row pl-3 text-white">
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                      </div>
+                 
+                </div>
+                </div>
+                <!-- end of profile container -->
+
+
+
+                <!-- Profiles -->
+      <div class="container mt-4 mb-4 bg-dark rounded" id="profileView">
+          <div class="row" id="singleProfile">
+              <!-- User Drop Down Menu/ will use css z-index to overlay dropdown menu -->
+              <div class="col-4">
+              <nav class="navbar navbar-light bg-dark">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-controls="collapseTwo" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapseTwo">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Bio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Skills</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Recent Works</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                          </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+  
+            <!-- site title/allow user to display current works title preview -->
+              <div class="col-4 pt-4 mt-4">
+                <h4 class="text-center text-light">
+                  User and or site preview title
+                </h4>
+              </div>
+  
+              <!-- profile img -->
+              <div class="col-4 "> 
+                <img class="rounded float-right bg-primary mb-3 mt-3" src="./assets/images/profile-pic.png" width="90px" height="90px"> 
+              </div>
+            </div>
+            <div class="container text-center">
+  
+              <!-- preview user site/ replace with javascript logic URL -->
+                <iframe src="https://bootstrapmade.com/" width="760" height="600" class="rounded">
+                </iframe>
+  
+                <!-- like and comment buttons, javascript logic and firebase for buttons. comment box modal and score counter -->
+                <div class="row">
+                  <div class="col-8"></div>
+                    <div class="col-1 ml-3"><img src="./assets/images/like.png" width="40px" height="33px"></div>
+                    <div class="col-1"><img src="./assets/images/comment-logo.png" width="40px" height="35px"></div>
+                  </div>
+              </div>
+  
+              <!-- user comment data template -->
+                <div class="container">
+                <div class="row">
+                  <div class="col-1"></div>
+                  <!-- user pic -->
+                      <div class="col-1  p-0"> 
+                          <img class="rounded" src="./assets/images/profile-pic.png" width="45px" height="45px"> 
+                        </div>
+                        <div class="col-9 pl-0">
+                          <div class="row">
+                            <!-- user name -->
+                            <div class="col-2 text-white text-left pr-0" id="UserName"><h5>UserName</h5></div>
+                            <!-- time user commented -->
+                            <div class="col-2 text-info text-left pl-1" id="comment-time">1:00 PM</div>
+                          </div>
+                          <!-- users comment -->
+                          <div class="row pl-3 text-white">
+                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                              </div>
+                          </div>
+                        </div>
+                   
+                  </div>
+                  </div>
+                  <!-- end of profile container -->
+
+
+
+                  <!-- Profiles -->
+      <div class="container mt-4 mb-4 bg-dark rounded" id="profileView">
+          <div class="row" id="singleProfile">
+              <!-- User Drop Down Menu/ will use css z-index to overlay dropdown menu -->
+              <div class="col-4">
+              <nav class="navbar navbar-light bg-dark">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-controls="collapseTwo" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapseTwo">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Bio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Skills</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Recent Works</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                          </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+  
+            <!-- site title/allow user to display current works title preview -->
+              <div class="col-4 pt-4 mt-4">
+                <h4 class="text-center text-light">
+                  User and or site preview title
+                </h4>
+              </div>
+  
+              <!-- profile img -->
+              <div class="col-4 "> 
+                <img class="rounded float-right bg-primary mb-3 mt-3" src="./assets/images/profile-pic.png" width="90px" height="90px"> 
+              </div>
+            </div>
+            <div class="container text-center">
+  
+              <!-- preview user site/ replace with javascript logic URL -->
+                <iframe src="https://bootstrapmade.com/" width="760" height="600" class="rounded">
+                </iframe>
+  
+                <!-- like and comment buttons, javascript logic and firebase for buttons. comment box modal and score counter -->
+                <div class="row">
+                  <div class="col-8"></div>
+                    <div class="col-1 ml-3"><img src="./assets/images/like.png" width="40px" height="33px"></div>
+                    <div class="col-1"><img src="./assets/images/comment-logo.png" width="40px" height="35px"></div>
+                  </div>
+              </div>
+  
+              <!-- user comment data template -->
+                <div class="container">
+                <div class="row">
+                  <div class="col-1"></div>
+                  <!-- user pic -->
+                      <div class="col-1  p-0"> 
+                          <img class="rounded" src="./assets/images/profile-pic.png" width="45px" height="45px"> 
+                        </div>
+                        <div class="col-9 pl-0">
+                          <div class="row">
+                            <!-- user name -->
+                            <div class="col-2 text-white text-left pr-0" id="UserName"><h5>UserName</h5></div>
+                            <!-- time user commented -->
+                            <div class="col-2 text-info text-left pl-1" id="comment-time">1:00 PM</div>
+                          </div>
+                          <!-- users comment -->
+                          <div class="row pl-3 text-white">
+                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                              </div>
+                          </div>
+                        </div>
+                   
+                  </div>
+                  </div>
+                  <!-- end of profile container -->
+
+           <!-- pages -->
+                  <nav class="mr-4 mb-4" aria-label="Page navigation example">
+                      <ul class="pagination justify-content-end">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
 
 
 
