@@ -13,7 +13,7 @@ firebase.initializeApp(config);
 
 
 
-var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=euu1LQJ75njV7gh2yYrVmDf5jG8ldshP&q=hacker&limit=1&offset=0&rating=PG&lang=en";
+var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=euu1LQJ75njV7gh2yYrVmDf5jG8ldshP&tag=hacker&rating=PG";
 
    $.ajax({
      url: queryURL,
@@ -23,27 +23,29 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=euu1LQJ75njV7gh2yYr
     .then(function(response) {
     console.log(queryURL);
 
-  // window.fbAsyncInit = function() {
-  //   FB.init({
-  //     appId      : '{2162737323781924}',
-  //     cookie     : true,
-  //     xfbml      : true,
-  //     version    : '{v3.2}'
-  //   });
-      
-  //   FB.AppEvents.logPageView();   
-      
-  // };
+    var imageURLs = [
+      "https://media.giphy.com/media/ohONS2y8GTDoI/giphy.gif",
+      "https://media.giphy.com/media/e5rHVwosWkEbS/giphy.gif",
+      "https://media.giphy.com/media/VHHxxFAeLaYzS/giphy.gif",
+      "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif",
+      "https://media.giphy.com/media/Y0iW7rfgtnoHooAdNW/giphy.gif"
+ ];
+ 
+ function getImageTag() {
+   var img = '<img src=\"';
+   var randomIndex = Math.floor(Math.random() * imageURLs.length);
+   img += imageURLs[randomIndex];
+   img += '\" alt=\"Some alt text\"/>';
+   return img;
+ }
 
-  // (function(d, s, id){
-  //    var js, fjs = d.getElementsByTagName(s)[0];
-  //    if (d.getElementById(id)) {return;}
-  //    js = d.createElement(s); js.id = id;
-  //    js.src = "https://connect.facebook.net/en_US/sdk.js";
-  //    fjs.parentNode.insertBefore(js, fjs);
-  //  }(document, 'script', 'facebook-jssdk'));
+ //document.write(getImageTag());
+ $("#gifs-appear-here").append(getImageTag);
+    
 
-  //Click event for the submit button. When user clicks Submit button to sign in or create profile...
+    
+
+  
 
   $("#submitBtn").on("click", function(event) {
           
@@ -51,7 +53,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=euu1LQJ75njV7gh2yYr
         event.preventDefault();
         
     //Grab the values that the user enters in the text boxes in the "Add train" section. Store the values in variables.
-      let uname = $("#inputUserName").val().trim();
+    let uname = $("#inputUserName").val().trim();
     let psWord = $("#inputPassWord").val().trim();
     
     console.log(uname);
