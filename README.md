@@ -9,7 +9,7 @@ Need to find a developer that meets your coding needs? Come check out discoverTe
 
 ## Developers
 
-- Developer 1: Rob
+- Developer 1: Rob Mathew
 - Portfolio: https://rmathew21.github.io/Responsive-Portfolio/
 - Github: https://github.com/rmathew21
 - LinkedIn
@@ -17,7 +17,7 @@ Need to find a developer that meets your coding needs? Come check out discoverTe
 - Portfolio
 - Github
 - LinkedIn
-- Developer 3: Colton
+- Developer 3: Colton Porto
 - Portfolio
 - Github
 - LinkedIn
@@ -39,6 +39,14 @@ Need to find a developer that meets your coding needs? Come check out discoverTe
 - make sure its accurate at the end
 
 ## MVP
+For our Minimum Viable Product the must have features include the following: 
+
+-a login page that allows users to register a profile for the app  and navigate to the home page 
+-dynamic input fields that are powered/brought to llfe with JS
+-an active navBar that allows users to explore the site and or jump to specific develops using one of the following: developer's name,  frontend, backend, server, fullstack etc
+-a page that allows users to upload a photo, create bio/contact information and link github and or other project portfolio sites 
+-an option to like or comment on a project 
+-an active data base that is powered by firebase  that allows the app to save user informationa nd uploads
 
 - List the Must Have Features
 
