@@ -1,3 +1,18 @@
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAqC7lVDeuIKjqaZRREUB7rDZfB9--70Sc",
+  authDomain: "project1-e5a96.firebaseapp.com",
+  databaseURL: "https://project1-e5a96.firebaseio.com",
+  projectId: "project1-e5a96",
+  storageBucket: "project1-e5a96.appspot.com",
+  messagingSenderId: "793064562321"
+};
+firebase.initializeApp(config);
+
+
+
+
+
 var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=euu1LQJ75njV7gh2yYrVmDf5jG8ldshP&q=programmer&limit=2&offset=0&rating=PG&lang=en";
 
    $.ajax({
