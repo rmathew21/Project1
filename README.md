@@ -40,8 +40,9 @@ Need to find a developer that meets your coding needs? Come check out discoverTe
 
 ## MVP
 For our Minimum Viable Product the must have features include the following: 
+-a login page that requires a valid user name and psword
 
--a login page that allows users to register a profile for the app  and navigate to the home page 
+-a login page that allows users to register a profile for the app or navigate to the home page 
 -dynamic input fields that are powered/brought to llfe with JS
 -an active navBar that allows users to explore the site and or jump to specific develops using one of the following: developer's name,  frontend, backend, server, fullstack etc
 -a page that allows users to upload a photo, create bio/contact information and link github and or other project portfolio sites 
