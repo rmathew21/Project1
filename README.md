@@ -9,7 +9,7 @@ Need to find a developer that meets your coding needs? Come check out discoverTe
 
 ## Developers
 
-- Developer 1: Rob
+- Developer 1: Rob Mathew
 - Portfolio: https://rmathew21.github.io/Responsive-Portfolio/
 - Github: https://github.com/rmathew21
 - LinkedIn
@@ -17,7 +17,7 @@ Need to find a developer that meets your coding needs? Come check out discoverTe
 - Portfolio
 - Github
 - LinkedIn
-- Developer 3: Colton
+- Developer 3: Colton Porto
 - Portfolio
 - Github
 - LinkedIn
@@ -39,7 +39,7 @@ Need to find a developer that meets your coding needs? Come check out discoverTe
 - make sure its accurate at the end
 
 ## MVP
-
+For our Minimum Viable Product
 - List the Must Have Features
 
 ## Stretch Goals
