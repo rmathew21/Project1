@@ -17,7 +17,7 @@ Need to find a developer that meets your coding needs? Come check out discoverTe
 - Portfolio
 - Github
 - LinkedIn
-- Colton Porto - Firebase Auth
+- Colton Porto - Firebase Auth, nav bar, HTML shell
 - Portfolio
 - Github
 - LinkedIn
