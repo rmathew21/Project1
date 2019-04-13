@@ -1,4 +1,4 @@
-
+console.log("javascript is linked!")
 
   window.fbAsyncInit = function() {
     FB.init({
