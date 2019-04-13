@@ -13,7 +13,7 @@ firebase.initializeApp(config);
 
 
 
-var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=euu1LQJ75njV7gh2yYrVmDf5jG8ldshP&q=programmer&limit=2&offset=0&rating=PG&lang=en";
+var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=euu1LQJ75njV7gh2yYrVmDf5jG8ldshP&q=hacker&limit=1&offset=0&rating=PG&lang=en";
 
    $.ajax({
      url: queryURL,
