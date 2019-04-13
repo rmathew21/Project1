@@ -23,7 +23,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=euu1LQJ75njV7gh2yYr
     .then(function(response) {
     console.log(queryURL);
 
-     branch_readMe
+     
     var imageURLs = [
       "https://media.giphy.com/media/ohONS2y8GTDoI/giphy.gif",
       "https://media.giphy.com/media/e5rHVwosWkEbS/giphy.gif",
@@ -76,7 +76,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=euu1LQJ75njV7gh2yYr
   
           });
 
-  master
+  
     console.log(response);
 
     // storing data from the AJAX request in the results variable
