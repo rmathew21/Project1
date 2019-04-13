@@ -1,3 +1,33 @@
+body {
+    background-color: #f1f1f1;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    font-size: 3.5rem;
+}
+
+
+input[type="text"],textarea {
+
+    background-color : #f1f1f1; 
+  
+  }
+
+  input[type="email"],textarea {
+
+    background-color : #f1f1f1; 
+  
+  }
+  input[type="password"],textarea {
+
+    background-color : #f1f1f1; 
+  
+  }
+  .form-group {
+      margin: -.5rem;
+  }
+
 #gifs-appear-here {
     position: absolute;
     top: 0;
