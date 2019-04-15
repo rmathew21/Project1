@@ -59,9 +59,31 @@ $("#loginBtn").on("click", function() {
   window.open("../project1/member-login.html");
 });
 
+//if user has been created and password is correct, will direct you to home/nav page.
+
+$("#submitBtn").on("click", function(event) {
+          
+  // Prevent form from submitting
+      event.preventDefault();
+    
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        window.open("../project1/home-nav.html")
+        // User is signed in.
+      } else {
+        // No user is signed in.
+      }
+    });
+  
+});
 
 
-var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=euu1LQJ75njV7gh2yYrVmDf5jG8ldshP&q=hacker&limit=1&offset=0&rating=PG&lang=en";
+
+
+
+//giphy ajax call
+
+var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=euu1LQJ75njV7gh2yYrVmDf5jG8ldshP&tag=hacker&rating=PG";
 
    $.ajax({
      url: queryURL,
@@ -69,51 +91,54 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=euu1LQJ75njV7gh2yYr
    })
    
     .then(function(response) {
-    // console.log(queryURL);
+    console.log(queryURL);
 
-    // console.log(response);
+     
+    var imageURLs = [
+      "https://media.giphy.com/media/ohONS2y8GTDoI/giphy.gif",
+      "https://media.giphy.com/media/e5rHVwosWkEbS/giphy.gif",
+      "https://media.giphy.com/media/VHHxxFAeLaYzS/giphy.gif",
+      "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif",
+      "https://media.giphy.com/media/Y0iW7rfgtnoHooAdNW/giphy.gif"
+ ];
+ 
+ function getImageTag() {
+   var img = '<img src=\"';
+   var randomIndex = Math.floor(Math.random() * imageURLs.length);
+   img += imageURLs[randomIndex];
+   img += '\" alt=\"Some alt text\"/>';
+   return img;
+ }
 
-    // storing data from the AJAX request in the results variable
-    var results = response.data;
+ //document.write(getImageTag());
+ $("#gifs-appear-here").append(getImageTag);
 
-    // looping through each result item
-    for (var i = 0; i < results.length; i++) {
 
-    // creating and storing a div tag
-    var programmer = $("<div>");
+ console.log(response);
 
-    var p = $("<p>").text("Rating: " + results[i].rating);
+ // storing data from the AJAX request in the results variable
+ var results = response.data;
 
-    var programmerImage = $("<img>").attr('src', results[i].images.fixed_height.url);
+ // looping through each result item
+ for (var i = 0; i < results.length; i++) {
 
-    programmer.append(p);
-    programmer.append(programmerImage);
+ // creating and storing a div tag
+ var programmer = $("<div>");
 
-    $("#gifs-appear-here").prepend(programmerImage);
+ var p = $("<p>").text("Rating: " + results[i].rating);
 
-    }
-  
-          });
+ var programmerImage = $("<img>").attr('src', results[i].images.fixed_height.url);
 
-    
+ programmer.append(p);
+ programmer.append(programmerImage);
 
-//if user has been created and password is correct, will direct you to home/nav page.
+ $("#gifs-appear-here").prepend(programmerImage);
 
-    $("#submitBtn").on("click", function(event) {
-          
-      // Prevent form from submitting
-          event.preventDefault();
-        
-        firebase.auth().onAuthStateChanged(function(user) {
-          if (user) {
-            window.open("../project1/home-nav.html")
-            // User is signed in.
-          } else {
-            // No user is signed in.
-          }
-        });
-      
-  });
+ }
+
+       });
+
+
 
   
 
