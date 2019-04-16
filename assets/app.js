@@ -7,11 +7,101 @@ var config = {
   storageBucket: "project1-e5a96.appspot.com",
   messagingSenderId: "793064562321"
 };
+
 firebase.initializeApp(config);
 
+// Get a reference to the database service
+var database = firebase.database();
+// save the user's profile into Firebase so we can list users,
+// use them in Security and Firebase Rules, and show profiles
+var user = firebase.auth().currentUser;
+
+//signs user into firebase
+ $("#submitBtn").on("click", e => {
+  const textEmail = $("#inputUserEmail").val();
+  const textPassword = $("#inputPassWord").val();
+  
+    // console.log(textPassword);
+  //  console.log(textEmail);
+      //firebase user authentication
+      const email = textEmail;
+      const password = textPassword;
+      const auth = firebase.auth();
+       // sign in
+       const promise = auth.signInWithEmailAndPassword(email, password);
+       promise.catch(e => console.log(e.message));
+ });
+
+
+ //adds email to firebase
+ $("#indexSignUp").on("click", e =>  {
+   //firebase user authentication
+   const textEmail = $("#inputEmail1").val();
+  const textPassword = $("#exampleInputPassword1").val();
+  console.log(textEmail)
+   const email1 = textEmail;
+   const password = textPassword;
+   const auth = firebase.auth();
+   // sign in
+   const promise = auth.createUserWithEmailAndPassword(email1, password);
+
+   promise.catch(e => console.log(e.message));
+
+    // const textFullName = $("#inputFullName").val();
+    // const textUserName = $("#exampleInputEmail1").val();
+  //   var userId = firebase.auth().currentUser.uid;
+
+  //  function writeUserData() {
+  //    firebase.database().ref('users/' + userId).set({
+  //      email: textEmail,
+  //      name: textFullName,
+  //      username: textUserName
+  //    });
+  //  }
+
+  //  writeUserData();
+
+
+  //  var personInfo = firebase.database().ref('users/' + textUserName + 'name');
+  //  personInfo.on('value', function(snapshot) {
+  //    console.log(snapshot.val());
+  //  })
+     window.open("../project1/home-nav.html")
+
+ });
+
+
+$("#loginBtn").on("click", function() {
+  firebase.auth().signOut();
+  window.open("../project1/member-login.html");
+});
+
+//if user has been created and password is correct, will direct you to home/nav page.
+
+$("#submitBtn").on("click", function(event) {
+          
+  // Prevent form from submitting
+      event.preventDefault();
+    
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        window.open("../project1/home-nav.html")
+        // User is signed in.
+      } else {
+        // No user is signed in.
+      }
+    });
+  
+});
 
 
 
+
+
+
+
+
+//giphy ajax call
 
 var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=euu1LQJ75njV7gh2yYrVmDf5jG8ldshP&tag=hacker&rating=PG";
 
@@ -42,95 +132,34 @@ var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=euu1LQJ75njV7gh2yYr
 
  //document.write(getImageTag());
  $("#gifs-appear-here").append(getImageTag);
-    
-
-    
-
-  
-
-  $("#submitBtn").on("click", function(event) {
-          
-    // Prevent form from submitting
-        event.preventDefault();
-        
-    //Grab the values that the user enters in the text boxes in the "Add train" section. Store the values in variables.
-    let uname = $("#inputUserName").val().trim();
-    let psWord = $("#inputPassWord").val().trim();
-    
-    console.log(uname);
-    console.log(psWord);
-  
-    if(uname === "" || psWord === "") {
-    $('#invalidUserName').empty();
-    $('#invalidPsword').empty();
-    }
-    else if (uname === null || psWord === null) {
-    $('#invalidUserName').empty();
-    $('#invalidPsword').empty();
-  
-    }
-    else if (uname === "project1" && psWord === "12345") {
-      window.open("../project1/home-nav.html");
-  
-    }
-  
-          });
-
-  
-    console.log(response);
-
-    // storing data from the AJAX request in the results variable
-    var results = response.data;
-
-    // looping through each result item
-    for (var i = 0; i < results.length; i++) {
-
-    // creating and storing a div tag
-    var programmer = $("<div>");
-
-    var p = $("<p>").text("Rating: " + results[i].rating);
-
-    var programmerImage = $("<img>").attr('src', results[i].images.fixed_height.url);
-
-    programmer.append(p);
-    programmer.append(programmerImage);
-
-    $("#gifs-appear-here").prepend(programmerImage);
-
-    }
-  
-          });
-
-    
 
 
-    $("#submitBtn").on("click", function(event) {
-          
-      // Prevent form from submitting
-          event.preventDefault();
-          
-      //Grab the values that the user enters in the text boxes in the "Add train" section. Store the values in variables.
-        let uname = $("#inputUserName").val().trim();
-      let psWord = $("#inputPassWord").val().trim();
-      
-      console.log(uname);
-      console.log(psWord);
-    
-      if(uname === "" || psWord === "") {
-      $('#invalidUserName').empty();
-      $('#invalidPsword').empty();
-      }
-      else if (uname === null || psWord === null) {
-      $('#invalidUserName').empty();
-      $('#invalidPsword').empty();
-    
-      }
-      else if (uname === "project1" && psWord === "12345") {
-        window.open("../project1/home-nav.html");
-    
-      }
-  });
+ console.log(response);
+
+ // storing data from the AJAX request in the results variable
+ var results = response.data;
+
+ // looping through each result item
+ for (var i = 0; i < results.length; i++) {
+
+ // creating and storing a div tag
+ var programmer = $("<div>");
+
+ var p = $("<p>").text("Rating: " + results[i].rating);
+
+ var programmerImage = $("<img>").attr('src', results[i].images.fixed_height.url);
+
+ programmer.append(p);
+ programmer.append(programmerImage);
+
+ $("#gifs-appear-here").prepend(programmerImage);
+
+ }
+
+       });
+
+
 
   
 
-   
+ 
