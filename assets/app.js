@@ -47,28 +47,32 @@ var user = firebase.auth().currentUser;
 
    promise.catch(e => console.log(e.message));
 
-    // const textFullName = $("#inputFullName").val();
-    // const textUserName = $("#exampleInputEmail1").val();
-  //   var userId = firebase.auth().currentUser.uid;
 
-  //  function writeUserData() {
-  //    firebase.database().ref('users/' + userId).set({
-  //      email: textEmail,
-  //      name: textFullName,
-  //      username: textUserName
-  //    });
-  //  }
-
-  //  writeUserData();
-
-
-  //  var personInfo = firebase.database().ref('users/' + textUserName + 'name');
-  //  personInfo.on('value', function(snapshot) {
-  //    console.log(snapshot.val());
-  //  })
      window.open("../project1/home-nav.html")
 
  });
+
+ $("#saveBtn").on("click", function() {
+    //   const textFullName = $("#inputFullName1").val();
+    //  const textUserName = $("#inputUserName1").val();
+    //  var userId = firebase.auth().currentUser.uid;
+    console.log("hey");
+    // function writeUserData() {
+    //  firebase.database().ref('users/' + userId).set({
+    //     email: textEmail,
+    //    name: textFullName,
+    //     username: textUserName
+    //   });
+    // }
+
+    // writeUserData();
+
+
+  //  var personInfo = firebase.database().ref('users/' + textUserName + 'name');
+  //   personInfo.on('value', function(snapshot) {
+  //     console.log(snapshot.val());
+  //   })
+  });
 
 
 $("#loginBtn").on("click", function() {
