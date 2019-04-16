@@ -14,7 +14,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 // save the user's profile into Firebase so we can list users,
 // use them in Security and Firebase Rules, and show profiles
-
+var user = firebase.auth().currentUser;
 
 //signs user into firebase
  $("#submitBtn").on("click", e => {
@@ -39,17 +39,34 @@ var database = firebase.database();
    const textEmail = $("#inputEmail1").val();
   const textPassword = $("#exampleInputPassword1").val();
   console.log(textEmail)
-   const email = textEmail;
+   const email1 = textEmail;
    const password = textPassword;
    const auth = firebase.auth();
    // sign in
-   const promise = auth.createUserWithEmailAndPassword(email, password);
+   const promise = auth.createUserWithEmailAndPassword(email1, password);
 
    promise.catch(e => console.log(e.message));
 
-   
+    // const textFullName = $("#inputFullName").val();
+    // const textUserName = $("#exampleInputEmail1").val();
+  //   var userId = firebase.auth().currentUser.uid;
 
-  window.open("../project1/home-nav.html")
+  //  function writeUserData() {
+  //    firebase.database().ref('users/' + userId).set({
+  //      email: textEmail,
+  //      name: textFullName,
+  //      username: textUserName
+  //    });
+  //  }
+
+  //  writeUserData();
+
+
+  //  var personInfo = firebase.database().ref('users/' + textUserName + 'name');
+  //  personInfo.on('value', function(snapshot) {
+  //    console.log(snapshot.val());
+  //  })
+     window.open("../project1/home-nav.html")
 
  });
 
@@ -76,6 +93,9 @@ $("#submitBtn").on("click", function(event) {
     });
   
 });
+
+
+
 
 
 
