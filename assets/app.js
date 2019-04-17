@@ -54,27 +54,27 @@ var user = firebase.auth().currentUser;
 
  });
 
- $("#saveBtn").on("click", function() {
-    //   const textFullName = $("#inputFullName1").val();
-    //  const textUserName = $("#inputUserName1").val();
-    //  var userId = firebase.auth().currentUser.uid;
-    console.log("hey");
-    // function writeUserData() {
-    //  firebase.database().ref('users/' + userId).set({
-    //     email: textEmail,
-    //    name: textFullName,
-    //     username: textUserName
-    //   });
-    // }
+//  $("#saveBtn").on("click", function() {
+//     //   const textFullName = $("#inputFullName1").val();
+//     //  const textUserName = $("#inputUserName1").val();
+//     //  var userId = firebase.auth().currentUser.uid;
+//     console.log("hey");
+//     // function writeUserData() {
+//     //  firebase.database().ref('users/' + userId).set({
+//     //     email: textEmail,
+//     //    name: textFullName,
+//     //     username: textUserName
+//     //   });
+//     // }
 
-    // writeUserData();
+//     // writeUserData();
 
 
-  //  var personInfo = firebase.database().ref('users/' + textUserName + 'name');
-  //   personInfo.on('value', function(snapshot) {
-  //     console.log(snapshot.val());
-  //   })
-  });
+//   //  var personInfo = firebase.database().ref('users/' + textUserName + 'name');
+//   //   personInfo.on('value', function(snapshot) {
+//   //     console.log(snapshot.val());
+//   //   })
+//   });
 
 
 $("#loginBtn").on("click", function() {

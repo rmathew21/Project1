@@ -6,77 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tell us about yourself</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
-    <!-- Jquery Script -->
-    <script
-    src="https://code.jquery.com/jquery-3.4.0.min.js"
-    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-    crossorigin="anonymous"></script>
-
-  <!-- bootstrap javascript functions links-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-  <!-- css file link -->
-  <link rel="stylesheet" type="text/css" href="./assets/style.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <h1 class="d-flex justify-content-center mb-2">Tell us about yourself</h1>
-                        <form class="box" method="post" action="" enctype="multipart/form-data">
-                            <div class="box__input">
-                                <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
-                                <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
-                                <button class="box__button" type="submit">Upload</button>
-                            </div>
-                                <div class="box__uploading">Uploading&hellip;</div>
-                                <div class="box__success">Done!</div>
-                                <div class="box__error">Error! <span></span>.</div>
-                        </form>    
-
-                        <form>
-                            <div class="form-group">
-                                <label for="bio"></label>
-                                <input type="text" class="form-control mb-1" id="inputBio" aria-describedby="bioHelp" placeholder="Enter Bio" name="bio" required>
-                                <!-- <small id="userName" class="logIn">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <div class="form-group">
-                                <label for="skills"></label>
-                                <input type="text" class="form-control" id="inputSkills" aria-describedby="skills" placeholder="Enter Skills" name="skills" required>
-                                <!-- <small id="userName" class="logIn">We'll never share your email with anyone else.</small> -->    
-                            </div>
-                            <div class="form-group">
-                                <label for="portfolio"></label>
-                                <input type="text" class="form-control" id="inputPortfolio" aria-describedby="portfolio" placeholder="Add Portfolio" name="portfolio" required>
-                                <!-- <small id="userName" class="logIn">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <div class="form-group">
-                                <label for="project"></label>
-                                <input type="text" class="form-control" id="inputProject" aria-describedby="project" placeholder="Add Your Projects" name="project" required>
-                                <!-- <small id="userName" class="logIn">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <div class="form-group">
-                                <label for="contact"></label>
-                                <input type="text" class="form-control" id="inputContactInfo" aria-describedby="contactInfo" placeholder="Add Your Contact Info" name="contactInfo" required>
-                                <!-- <small id="userName" class="logIn">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <div class="form-group">
-                                <label for="full name"></label>
-                                <input type="text" class="form-control" id="inputFullName1" aria-describedby="contactInfo" placeholder="Add Your full name" name="full name" required>
-                                <!-- <small id="userName" class="logIn">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <div class="form-group">
-                                <label for="username"></label>
-                                <input type="text" class="form-control" id="inputUserName1" aria-describedby="contactInfo" placeholder="Add Your User Name" name="username" required>
-                                <!-- <small id="userName" class="logIn">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <a class="btn btn-primary mt-3" id="saveBtn">Save</a>
-
+                <div class="col-md-4">
+                        <div class="card mt-5">
+                                <h1 class="d-flex justify-content-center">discoverTECH</h1>
+                            <a href="#" class="btn btn-primary mt-3 ml-3 mr-3">Login with facebook</a>
+                                
+                           <form>  
+                                <div class="card-body">
+    
+                                <div style="width: 100%; height: 15px; border-bottom: 1px solid #f1f1f1; text-align: center">
+                                    <span style="font-size: .8rem; background-color: #fff;">
+                                      OR </span>
+                                  </div>
+    
+                                  <form>   
+                                        <div class="form-group">
+                                          <label for="email"></label>
+                                          <input type="email" class="form-control mb-1" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter Email" name="email" required>
+                                          <!-- <small id="userName" class="logIn">We'll never share your email with anyone else.</small> -->
+                                        </div>
+                                        
+                                        
+                                        <div class="form-group">
+                                          <label for="psw"></label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" name="psw" required>
+                                         
+                                         
+                                          <a class="btn btn-primary mt-3" id="indexSignUp">Sign Up</a>
+                                        </div>
+                                      </form>
+                                
+                                
+                                 
+                                 
                                   
                                 </div>
                               </form>
@@ -89,12 +60,7 @@
         </div>
         
     </div>
-
-    <!-- firebase.js link-->
-   <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
-
-     <!-- javascript file link -->
-     <script type="text/javascript" src="./assets/app.js"></script>
+    
     
 </body>
 </html>
