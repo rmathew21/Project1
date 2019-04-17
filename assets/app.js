@@ -47,8 +47,10 @@ var user = firebase.auth().currentUser;
 
    promise.catch(e => console.log(e.message));
 
-
-     window.open("../project1/home-nav.html")
+    if(textEmail === "" && textPassword === ""){
+      console.log("you cant enter")
+    } else {window.open("../project1/home-nav.html")}
+     
 
  });
 
