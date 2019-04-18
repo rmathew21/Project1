@@ -45,12 +45,11 @@ var user = firebase.auth().currentUser;
    // sign in
    const promise = auth.createUserWithEmailAndPassword(email1, password);
 
-   promise.catch(e => console.log(e.message));
+   promise.catch(e => $("#warning").append(e.message))
 
-    if(textEmail === "" && textPassword === ""){
-      console.log("you cant enter")
-    } else {window.open("../project1/home-nav.html")}
-     
+    if(textPassword.length != 6){
+       console.log("you cant enter")
+     } else {window.open("../project1/home-nav.html")}
 
  });
 
@@ -75,6 +74,7 @@ var user = firebase.auth().currentUser;
 //   //     console.log(snapshot.val());
 //   //   })
 //   });
+
 
 
 $("#loginBtn").on("click", function() {
