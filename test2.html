@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,7 +23,64 @@
                 <div class="card-body">
                         <main class="grid mb-5">
                                 <img src="./assets/images/ap.jpg" alt="Sample photo">
-                                <img src="./assets/images/me.jpg.JPG" alt="Sample photo">
+
+
+                                <!-- add data-toggle="modal" && data-target="Your Modal ID"-->
+                                <img src="./assets/images/me.jpg.JPG" alt="Sample photo" title="Colton Porto" data-toggle="modal" data-target="#coltons-profile">
+                                        <!-- modal -->
+                                        <!-- make modal ID unique to you -->
+                                        <div class="modal fade" id="coltons-profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <!-- Your name -->
+                                                  <h5 class="modal-title" id="exampleModalLongTitle">Colton Porto</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <!-- add contents in modal-body-->
+                                                <div class="modal-body">
+                                                    <div class="card" style="width: 18rem;">
+                                                        <img src="./assets/images/me.jpg.JPG" class="card-img-top" alt="...">
+                                                        <!--Your contents body-->
+                                                        <div class="card-body">
+                                                          <h5 class="card-title">Bio</h5>
+                                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Skills</h5>
+                                                            <ul class="list-group list-group-flush">
+                                                                <li class="list-group-item">Cras justo odio</li>
+                                                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                                                <li class="list-group-item">Vestibulum at eros</li>
+                                                              </ul>
+                                                          </div>
+                                                          <div class="card-body">
+                                                              <h5 class="card-title">Contact</h5>
+                                                              <ul class="list-group list-group-flush">
+                                                                  <li class="list-group-item">Cras justo odio</li>
+                                                                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                                                                  <li class="list-group-item">Vestibulum at eros</li>
+                                                            </div>
+                                                        <div class="card-body">
+                                                          <a href="#" class="card-link">Portfolio link</a>
+                                                          <a href="#" class="card-link">Github link</a>
+                                                        </div>
+                                                      </div>
+
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        <!-- profile modal closed -->
+                                        
+                                
                                 
                                 <img src="./assets/images/headshot.jpg" alt="Sample photo">
                                 <img src="./assets/images/hoops.png" alt="Sample photo">
@@ -117,7 +177,36 @@
                               
                               <main class="grid ml-3 mr-3 mb-3" id="grid2">
                                 <img src="./assets/images/giphy1.png" alt="rob">
-                                <img src="./assets/images/colton-trivia.PNG" alt="colton">
+
+
+                                <!-- add data-toggle="modal" && data-target="Your Modal ID"--> 
+                                <img src="./assets/images/colton-trivia.PNG" alt="colton" data-toggle="modal" data-target="#trivia-game">
+                                <!-- make modal ID unique to you -->
+                                <!-- Modal -->
+                                      <div class="modal fade" id="trivia-game" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Colton Porto</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                              <!-- your project img && your project link-->
+                                              <div class="modal-body">
+                                                  <img src="./assets/images/colton-trivia.PNG" alt="colton">
+                                                  <a href="https://csporto23.github.io/TriviaGame/" class="card-link">Easter Trivia Game</a>
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- Project modal closed -->
+
+
+                               
                                 <img src="http://www.animationmagazine.net/wordpress/wp-content/uploads/Hey-Duggee-1000x600.jpg" alt="AP">
                                 <img src="./assets/images/colton-wiz.PNG" alt="colton">
                                 <img src="https://static.hiphopdx.com/2013/03/freshprince_opt.jpg" alt="AP">
@@ -136,8 +225,6 @@
 
 
 
-
-
-        
+              
 </body>
 </html>

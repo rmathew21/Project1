@@ -45,9 +45,9 @@ var user = firebase.auth().currentUser;
    // sign in
    const promise = auth.createUserWithEmailAndPassword(email1, password);
 
-   promise.catch(e => $("#warning").append(e.message))
+   promise.catch(e => $("#warning").text(e.message))
 
-    if(textPassword.length != 6){
+    if(textPassword.length != 6 && textEmail.length != 6){
        console.log("you cant enter")
      } else {window.open("../project1/home-nav.html")}
 
