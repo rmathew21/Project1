@@ -175,7 +175,15 @@ var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=euu1LQJ75njV7gh2yYr
 
  }
 
+
+
        });
+
+
+     
+  
+
+
 
 
 
