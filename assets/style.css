@@ -1,3 +1,145 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.mac{
+  padding-top: 70px;
+  height: 650px;
+ 
+  float: right;
+  margin: 10px; 
+}
+
+body{
+  background-color: #fafafa!important;
+}
+
+.container{
+  margin-top: 20px;
+  position: relative!important;
+}
+
+
+
+#gifs-appear-here {
+  float: left;
+  border: 10px solid black;
+ 
+  position: absolute;
+  margin-top:200px;
+  border: 10px solid #fafafa;
+ 
+  
+  
+}
+
+.right-column {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  width:350px;
+  margin: 10px;
+  padding: 40px;
+}
+
+.discoverTech{
+  margin: 15px auto;
+}
+
+.info{
+  font-weight: 600px;
+  line-height: 20px;
+  font-size:17px;
+  color: #999;
+}
+
+button img {
+  height: 20px !important;
+  padding: 0px 8px 2px;
+}
+
+.or {
+  font-size: 13px!important;
+  color: #999;
+  font-weight: 600;
+
+}
+
+.or::before 
+{
+content: '';
+background: #efefef;
+display: block;
+height:2px;
+width: 110px;
+position: relative;
+top: 11px;
+}
+
+.or::after 
+{
+content: '';
+background: #efefef;
+display: block;
+height:2px;
+width: 110px;
+position: relative;
+bottom: 10px;
+left: 160px;
+}
+
+.form-group{
+  margin-bottom: 6px!important;
+
+}
+
+.form-control{
+  background: #fafafa!important;
+  border: 1px solid #efefef!important;
+  font-size: 12px!important;
+
+
+}
+
+::placeholder{
+  color: #999!important;
+
+}
+
+.btn {
+  margin: 12px auto;
+  padding: 2px!important;
+  font-weight: 600!important;
+
+}
+
+.btn-primary{
+  background-color: #3897f0!important;
+  border: 1px solid #3897f0!important;
+}
+
+.terms {
+  line-height: 18px;
+  font-size: 14px;
+  color: #999;
+  margin: 5px 20px;
+}
+
+.right-column-login{
+  background: #fff;
+  border: 1px solid #eeeeee;
+  width: 350px;
+  margin: 10px;
+  padding:20px;
+}
+
+.right-column-login a:hover{
+  text-decoration: none;
+}
+
+
+
+
 body {
     background-color: #f1f1f1;
 }
