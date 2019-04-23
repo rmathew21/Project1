@@ -33,7 +33,8 @@ var user = firebase.auth().currentUser;
  });
 
 
- //adds email to firebase
+
+ // adds email to firebase and signs user up to our site
  $("#indexSignUp").on("click", e =>  {
    //firebase user authentication
    const textEmail = $("#inputEmail1").val();
@@ -47,43 +48,23 @@ var user = firebase.auth().currentUser;
 
    promise.catch(e => $("#warning").text(e.message))
 
-    if(textPassword.length != 6 && textEmail.length != 6){
+    if(textPassword.length < 6){
        console.log("you cant enter")
-     } else {window.open("../project1/home-nav.html")}
+     } else {window.open("../project1/log.html", '_self')}
 
  });
 
-//  $("#saveBtn").on("click", function() {
-//     //   const textFullName = $("#inputFullName1").val();
-//     //  const textUserName = $("#inputUserName1").val();
-//     //  var userId = firebase.auth().currentUser.uid;
-//     console.log("hey");
-//     // function writeUserData() {
-//     //  firebase.database().ref('users/' + userId).set({
-//     //     email: textEmail,
-//     //    name: textFullName,
-//     //     username: textUserName
-//     //   });
-//     // }
-
-//     // writeUserData();
 
 
-//   //  var personInfo = firebase.database().ref('users/' + textUserName + 'name');
-//   //   personInfo.on('value', function(snapshot) {
-//   //     console.log(snapshot.val());
-//   //   })
-//   });
-
-
-
-$("#loginBtn").on("click", function() {
+//signs current user out then sends you to the member sign-in page
+$("#indexSignIn").on("click", function() {
   firebase.auth().signOut();
-  window.open("../project1/member-login.html");
+  window.open("../project1/member-login.html", '_self');
 });
 
-//if user has been created and password is correct, will direct you to home/nav page.
 
+
+//if user has been created and password is correct, will direct you to home page.
 $("#submitBtn").on("click", function(event) {
           
   // Prevent form from submitting
@@ -91,7 +72,7 @@ $("#submitBtn").on("click", function(event) {
     
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        window.open("../project1/home-nav.html")
+        window.open("../project1/test2.html", '_self');
         // User is signed in.
       } else {
         // No user is signed in.
