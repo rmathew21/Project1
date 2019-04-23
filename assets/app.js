@@ -18,6 +18,7 @@ var user = firebase.auth().currentUser;
 
 //signs user into firebase
  $("#submitBtn").on("click", e => {
+  e.preventDefault();
   const textEmail = $("#inputUserEmail").val();
   const textPassword = $("#inputPassWord").val();
   
@@ -29,13 +30,16 @@ var user = firebase.auth().currentUser;
       const auth = firebase.auth();
        // sign in
        const promise = auth.signInWithEmailAndPassword(email, password);
-       promise.catch(e => console.log(e.message));
+       promise.catch(e => $("#warning2").text(e.message));
  });
 
 
- //adds email to firebase
+
+ // adds email to firebase and signs user up to our site
  $("#indexSignUp").on("click", e =>  {
-   //firebase user authentication
+   
+  e.preventDefault();
+  //firebase user authentication
    const textEmail = $("#inputEmail1").val();
   const textPassword = $("#exampleInputPassword1").val();
   console.log(textEmail)
@@ -47,51 +51,60 @@ var user = firebase.auth().currentUser;
 
    promise.catch(e => $("#warning").text(e.message))
 
-    if(textPassword.length != 6 && textEmail.length != 6){
-       console.log("you cant enter")
-     } else {window.open("../project1/home-nav.html")}
+    function workafter() {
+  
+  
+        if(textPassword.length > 7 && textEmail.length > 6){
+         firebase.auth().signOut().then(function() {
+           window.open("../project1/login.html", '_self');
+         }).catch(function(error) {
+           // An error happened.
+         });
+       
+        }
+  
+   
+   };
 
+   firebase.auth().onAuthStateChanged(function(user) {
+     if (user) {
+       workafter();
+       // User is signed in.
+     } else {
+       // No user is signed in.
+     }
+   });
+    
  });
 
-//  $("#saveBtn").on("click", function() {
-//     //   const textFullName = $("#inputFullName1").val();
-//     //  const textUserName = $("#inputUserName1").val();
-//     //  var userId = firebase.auth().currentUser.uid;
-//     console.log("hey");
-//     // function writeUserData() {
-//     //  firebase.database().ref('users/' + userId).set({
-//     //     email: textEmail,
-//     //    name: textFullName,
-//     //     username: textUserName
-//     //   });
-//     // }
-
-//     // writeUserData();
-
-
-//   //  var personInfo = firebase.database().ref('users/' + textUserName + 'name');
-//   //   personInfo.on('value', function(snapshot) {
-//   //     console.log(snapshot.val());
-//   //   })
-//   });
+ 
 
 
 
-$("#loginBtn").on("click", function() {
+ $("#signUpIndex").on("click", e =>  {
   firebase.auth().signOut();
-  window.open("../project1/member-login.html");
-});
+ });
 
-//if user has been created and password is correct, will direct you to home/nav page.
 
+
+//signs current user out then sends you to the member sign-in page
+ $("#indexSignIn").on("click", function() {
+    firebase.auth().signOut();
+   
+ });
+
+
+
+//if user has been created and password is correct, will direct you to home page.
 $("#submitBtn").on("click", function(event) {
-          
+  const textEmail = $("#inputUserEmail").val();
+  const textPassword = $("#inputPassWord").val();
   // Prevent form from submitting
       event.preventDefault();
     
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        window.open("../project1/home-nav.html")
+        window.open("../project1/explore.html", '_self');
         // User is signed in.
       } else {
         // No user is signed in.
