@@ -1,87 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!Doctype html>
+<html>
+    <head>
+    <title>Login Page</title>
+    <link href="../project1/assets/style.css" rel="stylesheet">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
 
-    <title>discoverTECH</title>
-   
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- <div class='col-sm' id="gifs-appear-here"></div> -->
+                    <img src="../project1/assets/images/mac2.png" class="mac">
 
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
- 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style.css">
-  </head>
-<body>
+                    
+                </div>
 
-    <div class='container'>
-        <div class='row'>
-            <div class='col-md-5'>
-                <!-- img src="./assets/images/dev.jpg" alt="developerPic" height="250px" width="250px" -->
-            </div>
-
-            <div id="gifs-appear-here">
-            </div>
-            
-                <div class="col-md-4">
-                    <div class="card mt-5">
-                            <h1 class="d-flex justify-content-center">discoverTECH</h1>
-                        <a href="#" class="btn btn-primary mt-3 ml-3 mr-3">Login with facebook</a>
-                            
-                       <form>  
-                            <div class="card-body">
-
-                            <div style="width: 100%; height: 15px; border-bottom: 1px solid #f1f1f1; text-align: center">
-                                <span style="font-size: .8rem; background-color: #fff;">
-                                  OR </span>
-                              </div>
-
-                              <form>   
-                                    <div class="form-group">
-                                      <label for="email"></label>
-                                      <input type="email" class="form-control mb-1" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter Email" name="email" required>
-                                      <!-- <small id="userName" class="logIn">We'll never share your email with anyone else.</small> -->
-                                    </div>
-                                    
-                                    
-                                    <div class="form-group">
-                                      <label for="psw"></label>
-                                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" name="psw" required>
-
-                                      <div id="warning"></div>
-                                     
-                                     
-                                      <a class="btn btn-primary mt-3" id="indexSignUp">Sign Up</a>
-                                    </div>
-                                  </form>
-                                  
-        
-                            </div>
-                            
-                          </div>
-                          <br/>
-                          <div class="card">
-                                <div class="card-body">
-                                 Have an account? <a href="member-login.html">Sign-in</a>
-                                </div>
-                              </div>
-
+               
+                <div class="col-sm-6">
+                    <div class="right-column text-center">
+                    <img src="../project1/assets/images/logo.png"  class="discoverTech" >  
+                       <p class="info">Sign up to see photos and videos from your friends.</p>
+                       <button type="submit" class="btn btn-primary btn-block"><img src="../project1/assets/images/fbLogo.png" class="fbLogo">Log in with Facebook
+                    </button>
+                    <p class="or">OR</p>
+                    <form>
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Mobile Number or Email">
+                        </div>
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="User Name">
+                        </div>
+                        <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                         Sign up
+                        </button>
+                    </form>
+                    <p class="terms">By signing up, you agree to our <b>Terms, Data Policy</b> and <b>Cookies Policy</b>. </p>
+                    </div>
+                    <div class="right-column-login text-center">
+                        <p>Have an account?<a href="#"> Login</a></p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- firebase.js link -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 
-    <!-- jquery link -->
-    <script
+
+
+        <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-  <!-- javascript link -->
-    <script src='../project1/assets/app.js'></script>
-
-                                
-      
-</body>
+    <script src="logic.js"></script>
+    </body>
 </html>
