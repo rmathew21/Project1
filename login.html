@@ -8,56 +8,54 @@
     </head>
 
     <body>
-        <div class="container">
+        <div class="container logInPage">
             <div class="row">
                 <div class="col-sm-6">
-                    <!-- <div class='col-sm' id="gifs-appear-here"></div> -->
-                    <img src="../project1/assets/images/mac2.png" class="mac">
-
-                    
+                      
                 </div>
+
+                <div id="gifs-appear-here">
+                    </div>
+                    
 
                
                 <div class="col-sm-6">
                     <div class="right-column text-center">
                     <img src="../project1/assets/images/logo.png"  class="discoverTech" >  
-                       <p class="info">Sign up to see photos and videos from your friends.</p>
-                       <button type="submit" class="btn btn-primary btn-block"><img src="../project1/assets/images/fbLogo.png" class="fbLogo">Log in with Facebook
-                    </button>
-                    <p class="or">OR</p>
+                    <button type="submit" class="btn btn-primary btn-block mb-3">
+                        Log In
+                       </button>
+                       
                     <form>
                         <div class="form-group">
                         <input type="text" class="form-control" placeholder="Mobile Number or Email">
                         </div>
-                        <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Full Name">
-                        </div>
-                        <div class="form-group">
-                        <input type="text" class="form-control" placeholder="User Name">
-                        </div>
+                        
                         <div class="form-group">
                         <input type="password" class="form-control" placeholder="Password">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">
-                         Sign up
-                        </button>
+
+                        <p class="or">OR</p>
+                        
+                        <a href="#"> Log In with Facebook</a></p>
+                      
                     </form>
-                    <p class="terms">By signing up, you agree to our <b>Terms, Data Policy</b> and <b>Cookies Policy</b>. </p>
+                    
                     </div>
                     <div class="right-column-login text-center">
-                        <p>Have an account?<a href="#"> Login</a></p>
+                        <p>Don't have an account?<a href="#"> Sign up</a></p>
                     </div>
                 </div>
             </div>
         </div>
 
-
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 
         <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-    <script src="logic.js"></script>
+    <script src="assets/app.js"></script>
     </body>
 </html>
